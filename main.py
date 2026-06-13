@@ -39,6 +39,20 @@ for node, score in centrality.items():
 
 most_important = max(centrality, key=centrality.get)
 
+def get_score(item):
+    return item[1]  # give me the second thing in the item
+
+
+sorted_entities = sorted(centrality.items(), key=get_score, reverse=True)
+
+print("\nTop Entities:")
+
+rank = 1
+
+for entity, score in sorted_entities:
+    print(f"{rank}. {entity}: {score:.3f}")
+    rank += 1
+
 print("\nEntity Types:")
 
 for node, data in G.nodes(data=True):

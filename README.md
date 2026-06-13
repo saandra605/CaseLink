@@ -1,16 +1,20 @@
 # CaseLink
 
-A graph-based investigation software that identifies relationships between suspects, victims, evidence, location and events.
+A graph-based investigation analysis tool that models relationships between suspects, victims, evidence, location and events.
 
 ## Current Features
 
-- Network visualisation
+- Interactive network visualisation
 - Entity categories
 - Relationship modelling
 - Centrality analysis
+- Ranking entity importance
 
 ## Technologies
 
 - Python
 - NetworkX
 - PyVis
+- Git
+- GitHub
+
