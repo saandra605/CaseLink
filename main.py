@@ -3,16 +3,32 @@ import networkx as nx
 
 G = nx.Graph()
 
-G.add_node("Suspect A", entity_type="suspect", color="red")
-G.add_node("Suspect B", entity_type="suspect", color="red")
-G.add_node("Victim", entity_type="victim", color="green")
-G.add_node("Phone Record", entity_type="evidence", color="blue")
-G.add_node("Crime Scene", entity_type="location", color="yellow")
+# Suspects
+G.add_node("John Carter", entity_type="suspect", color="red")
+G.add_node("Lisa Green", entity_type="suspect", color="red")
 
-G.add_edge("Suspect A", "Phone Record", relationship="used")
-G.add_edge("Phone Record", "Suspect B", relationship="belongs_to")
-G.add_edge("Suspect B", "Crime Scene", relationship="visited")
-G.add_edge("Crime Scene", "Victim", relationship="last_seen_at")
+# Victim
+G.add_node("Emma Brown", entity_type="victim", color="green")
+
+# Witness
+G.add_node("Michael Reed", entity_type="witness", color="orange")
+
+# Location
+G.add_node("Warehouse", entity_type="location", color="yellow")
+G.add_node("Train Station", entity_type="location", color="yellow")
+
+# Evidence
+G.add_node("Phone Record #19", entity_type="evidence", color="blue")
+G.add_node("Fingerprint A12", entity_type="evidence", color="blue")
+
+G.add_edge("John Carter", "Phone Record #19", relationship="used")
+G.add_edge("Phone Record #19", "Lisa Green", relationship="belongs_to")
+G.add_edge("Lisa Green", "Warehouse", relationship="visited")
+G.add_edge("Fingerprint A12", "Warehouse", relationship="found_at")
+G.add_edge("Emma Brown", "Warehouse", relationship="last_seen_at")
+G.add_edge("Fingerprint A12", "John Carter", relationship="linked_to")
+G.add_edge("Michael Reed", "Train Station", relationship="seen_at")
+G.add_edge("Michael Reed", "Emma Brown", relationship="saw")
 
 centrality = nx.degree_centrality(G)
 
