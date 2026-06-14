@@ -41,3 +41,10 @@ Next steps:
 - Make more realistic case data
 - Identify the most important suspect, evidence and location seperately
 - Load case data from a CSV file instead of coding it
+
+## Day 3
+Challenges:
+- spaces in my header for my pandas table
+
+Learned:
+- debugging e.e. print(entities.columns)

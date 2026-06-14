@@ -1,0 +1,10 @@
+name,entity_type,color
+
+John Carter,suspect,red
+Lisa Green,suspect,red
+Emma Brown,victim,green
+Michael Reed,witness,orange
+Phone Record #19,evidence,blue
+Fingerprint A12,evidence,blue
+Warehouse,location,yellow
+Train Station,location,yellow

@@ -1,34 +1,18 @@
 from pyvis.network import Network
 import networkx as nx
+import pandas as pd
 
 G = nx.Graph()
 
-# Suspects
-G.add_node("John Carter", entity_type="suspect", color="red")
-G.add_node("Lisa Green", entity_type="suspect", color="red")
+entities = pd.read_csv("data/entities.csv")
 
-# Victim
-G.add_node("Emma Brown", entity_type="victim", color="green")
+for index, row in entities.iterrows():  # loop through every row in the table
+    G.add_node(row["name"], entity_type=row["entity_type"], color=row["color"])
 
-# Witness
-G.add_node("Michael Reed", entity_type="witness", color="orange")
+relationships = pd.read_csv("data/relationships.csv")
 
-# Location
-G.add_node("Warehouse", entity_type="location", color="yellow")
-G.add_node("Train Station", entity_type="location", color="yellow")
-
-# Evidence
-G.add_node("Phone Record #19", entity_type="evidence", color="blue")
-G.add_node("Fingerprint A12", entity_type="evidence", color="blue")
-
-G.add_edge("John Carter", "Phone Record #19", relationship="used")
-G.add_edge("Phone Record #19", "Lisa Green", relationship="belongs_to")
-G.add_edge("Lisa Green", "Warehouse", relationship="visited")
-G.add_edge("Fingerprint A12", "Warehouse", relationship="found_at")
-G.add_edge("Emma Brown", "Warehouse", relationship="last_seen_at")
-G.add_edge("Fingerprint A12", "John Carter", relationship="linked_to")
-G.add_edge("Michael Reed", "Train Station", relationship="seen_at")
-G.add_edge("Michael Reed", "Emma Brown", relationship="saw")
+for index, row in relationships.iterrows():  # loop through every row in the table
+    G.add_edge(row["source"], row["target"], relationship=row["relationship"])
 
 centrality = nx.degree_centrality(G)
 

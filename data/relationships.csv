@@ -1,0 +1,9 @@
+source,target,relationship
+John Carter,Phone Record #19,used
+Phone Record #19,Lisa Green,belongs_to
+Lisa Green,Warehouse,visited
+Fingerprint A12,Warehouse,found_at
+Fingerprint A12,John Carter,linked_to
+Emma Brown,Warehouse,last_seen_at
+Michael Reed,Train Station,seen_at
+Michael Reed,Emma Brown,saw
