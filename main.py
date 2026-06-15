@@ -1,6 +1,7 @@
 from pyvis.network import Network
 import networkx as nx
 import pandas as pd
+import community as community_louvain
 
 G = nx.Graph()
 
@@ -70,6 +71,13 @@ find_most_important("suspect")
 find_most_important("witness")
 find_most_important("location")
 find_most_important("evidence")
+
+partition = community_louvain.best_partition(G)
+
+print("\nCommunitities:")
+
+for node, community_id in partition.items():
+    print(f"{node}: Community {community_id}")
 
 net = Network(height="750px", width="100%", notebook=False)
 
