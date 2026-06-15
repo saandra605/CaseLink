@@ -45,6 +45,32 @@ for node, data in G.nodes(data=True):
 print(f"\nMost Important Entity: {most_important}")
 print(f"Score: {centrality[most_important]: .3f}")
 
+def find_most_important(entity_type):
+
+    importants = []
+
+    for node, data in G.nodes(data=True):
+        if data["entity_type"] == entity_type:
+            importants.append((node, centrality[node]))
+
+    def get_score(item):
+        return item[1]
+
+    sorted_importants = sorted(importants, key=get_score, reverse=True)
+
+    most_important = sorted_importants[0]
+
+    name = most_important[0]
+    score = most_important[1]
+
+    print(f"\nMost Important {entity_type.title()}: {name}")
+    print(f"Score: {score:.3f}")
+
+find_most_important("suspect")
+find_most_important("witness")
+find_most_important("location")
+find_most_important("evidence")
+
 net = Network(height="750px", width="100%", notebook=False)
 
 for node, data in G.nodes(data=True):
