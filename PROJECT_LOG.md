@@ -43,8 +43,25 @@ Next steps:
 - Load case data from a CSV file instead of coding it
 
 ## Day 3
-Challenges:
-- spaces in my header for my pandas table
+
+Implemented:
+- A resuable find_most_important() function
+- Identified the most important suspect, witness, location and evidence
+
+Changes/Improvements:
+- Replaced repeated filtering code with a reusable function
 
 Learned:
-- debugging e.e. print(entities.columns)
+- Data filtering
+- Sorting custom data structures
+- Designing reusable code
+- Function parameters
+
+Challenges:
+- Understanding how parameters pass values into functions
+- Understanding how sorting how sorting functions use key=
+
+Next Steps:
+- Community detection
+- Larger investigation datasets
+- Enhanced analysis features
