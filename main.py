@@ -74,6 +74,8 @@ find_most_important("evidence")
 
 partition = community_louvain.best_partition(G)
 
+community_colors = {0: "red", 1: "blue", 2: "green", 3: "purple", 4: "orange"}
+
 print("\nCommunitities:")
 
 for node, community_id in partition.items():
@@ -81,11 +83,13 @@ for node, community_id in partition.items():
 
 net = Network(height="750px", width="100%", notebook=False)
 
-for node, data in G.nodes(data=True):
-    net.add_node(node, label=node, color=data["color"])
+for node in G.nodes():
 
-for source, target in G.edges():
-    net.add_edge(source, target)
+    community_id = partition[node]
+
+    G.nodes[node]["color"] = community_colors.get(community_id, "grey")
+
+net.from_nx(G)
 
 net.write_html("case_network.html")
 

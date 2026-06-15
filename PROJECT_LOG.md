@@ -65,3 +65,28 @@ Next Steps:
 - Community detection
 - Larger investigation datasets
 - Enhanced analysis features
+
+## Day 4
+
+Implemented:
+- Louvain community detection algorithm
+- Community-based graph visualisation
+- Community assignement for investigation entities
+
+Changes/Improvements:
+- Updated the graph colours to represent communities instead od entity types
+
+Learned:
+- How the Louvain algorithm idetifies clusters
+- How so store and access community IDs for nodes
+- How community detection works in graph networks
+
+Challenges:
+- Debugging PyVis node creattion errors
+- Making sure node colours were updated correctly before generarting the graph
+- Understanding what community IDs represent
+
+Next Steps:
+- Add hover tool which displays entity type, community ID and importance score
+- Make a larger and more realistic investigation dataset
+- Test community detection on more complex networks
