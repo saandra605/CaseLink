@@ -89,6 +89,12 @@ for node in G.nodes():
 
     G.nodes[node]["color"] = community_colors.get(community_id, "grey")
 
+    entity_type = G.nodes[node]["entity_type"]
+
+    importance_score = centrality[node]
+
+    G.nodes[node]["title"] = (f"Type: {entity_type}\n"f"Community: {community_id}\n" f"Importance: {importance_score:.3f}")
+
 net.from_nx(G)
 
 net.write_html("case_network.html")

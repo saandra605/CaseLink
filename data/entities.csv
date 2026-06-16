@@ -2,9 +2,21 @@ name,entity_type,color
 
 John Carter,suspect,red
 Lisa Green,suspect,red
-Emma Brown,victim,green
+Marcus White,suspect,red
+Daniel Brooks,suspect,red
+City Electronics Ltd,victim,green
 Michael Reed,witness,orange
+Sarah Jones,witness,orange
+James Wilson,witness,orange
 Phone Record #19,evidence,blue
+Phone Record #42,evidence,blue
 Fingerprint A12,evidence,blue
+CCTV Footage,evidence,blue
+Bank Transfer #77,evidence,blue
 Warehouse,location,yellow
 Train Station,location,yellow
+Petrol Station,location,yellow
+Storage Unit,location,yellow
+White Van,vehicle,purple
+Black BMW,vehicle,purple
+Rapid Logistics,organisation,pink

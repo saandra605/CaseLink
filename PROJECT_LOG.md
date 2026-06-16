@@ -90,3 +90,29 @@ Next Steps:
 - Add hover tool which displays entity type, community ID and importance score
 - Make a larger and more realistic investigation dataset
 - Test community detection on more complex networks
+
+## Day 5
+
+Implemented:
+- Node hover tool
+- Displays the entity data within the graph
+- Created a larger investigation case: more suspects, witnesses, evidence and location
+
+Changes/Improvements:
+- Added entity type display
+- Added community ID display
+- Added importance score display
+- Investigation network is larger and more realistic
+
+Learned:
+- How node tooltips work
+- How to build a more realistic dataset
+- How graph structure affects analysis results
+
+Challenges:
+- Fixing tootip formatting
+- Debugging graph errors
+- Creating realistic relationships between entities
+
+Next Steps:
+- Continue improving the investigation analysis

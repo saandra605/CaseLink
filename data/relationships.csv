@@ -1,9 +1,25 @@
 source,target,relationship
 John Carter,Phone Record #19,used
-Phone Record #19,Lisa Green,belongs_to
-Lisa Green,Warehouse,visited
+Lisa Green,Phone Record #19,belongs_to
+John Carter,White Van,owned
+Lisa Green,White Van,used
+White Van,Warehouse,visited
 Fingerprint A12,Warehouse,found_at
-Fingerprint A12,John Carter,linked_to
-Emma Brown,Warehouse,last_seen_at
-Michael Reed,Train Station,seen_at
-Michael Reed,Emma Brown,saw
+Marcus White,Phone Record #42,used
+Daniel Brooks,Phone Record #42,used
+Marcus White,Black BMW,owned
+Daniel Brooks,Black BMW,used
+Black BMW,Storage Unit,visited
+Bank Transfer #77,Storage Unit,linked_to
+Michael Reed,Warehouse,witnessed
+Sarah Jones,Storage Unit,witnessed
+James Wilson,Petrol Station,witnessed
+Rapid Logistics,Warehouse,operates
+Rapid Logistics,Storage Unit,operates
+City Electronics Ltd,Warehouse,victim_of
+Phone Record #19,Phone Record #42,contacted
+CCTV Footage,Warehouse,recorded
+CCTV Footage,White Van,captured
+Petrol Station,Black BMW,seen_at
+Train Station,Marcus White,seen_at
+Train Station,Daniel Brooks,seen_at
