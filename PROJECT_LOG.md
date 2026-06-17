@@ -116,3 +116,27 @@ Challenges:
 
 Next Steps:
 - Continue improving the investigation analysis
+
+## Day 6
+
+Implemented:
+- Addedd betweenness centrality analysis
+- Added shortest path analysis between entities
+
+Changes/Improvements:
+- Can trace connections between two nodes in the network
+- Can find entities that act like a bridge betwen groups
+
+Learned:
+- How betweenness centrality works
+- How shortest path alorithms find connections in a graph
+- The difference between degree centrality and betweenness centrality
+
+Challenges:
+- Understanding what information a shortest path funtion needs
+- Making analysis function more reusable using parameters
+- Converting path lists into a readable output
+
+Next Steps:
+- Display shortest paths more clearly in the graph
+- Continue improving investigation analysis

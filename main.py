@@ -22,6 +22,13 @@ print("\nEntity Importance Scores: ")
 for node, score in centrality.items():
     print(f"{node}: {score:.3f}")
 
+betweenness = nx.betweenness_centrality(G)
+
+print("\nBetweenness Scores: ")
+
+for node, score in betweenness.items():
+    print(f"{node}: {score:.3f}")
+
 most_important = max(centrality, key=centrality.get)
 
 def get_score(item):
@@ -46,13 +53,13 @@ for node, data in G.nodes(data=True):
 print(f"\nMost Important Entity: {most_important}")
 print(f"Score: {centrality[most_important]: .3f}")
 
-def find_most_important(entity_type):
+def find_most_important(entity_type, scores):
 
     importants = []
 
     for node, data in G.nodes(data=True):
         if data["entity_type"] == entity_type:
-            importants.append((node, centrality[node]))
+            importants.append((node, scores[node]))
 
     def get_score(item):
         return item[1]
@@ -67,10 +74,21 @@ def find_most_important(entity_type):
     print(f"\nMost Important {entity_type.title()}: {name}")
     print(f"Score: {score:.3f}")
 
-find_most_important("suspect")
-find_most_important("witness")
-find_most_important("location")
-find_most_important("evidence")
+find_most_important("suspect", centrality)
+find_most_important("witness", centrality)
+find_most_important("location", centrality)
+find_most_important("evidence", centrality)
+
+def find_shortest_path(start, end):
+
+    list = nx.shortest_path(G, start, end)
+
+    path = "-> ".join(list)
+
+    print(f"\nShortest Path from {start} -> {end} is: ")
+    print(f"{path}")
+
+find_shortest_path("John Carter","Marcus White")
 
 partition = community_louvain.best_partition(G)
 

@@ -13,15 +13,19 @@ A graph-based investigation analysis tool that models relationships between susp
 
 - Interactive graph visualisation using PyVis
 - Automatic node colouring
+- Community-based colouring
+- Interactive node hover information
 
 # Network Analysis
 
-- Centrality analysis
-- Entity importance
+- Degree centrality analysis
+- Betweenness centrality analysis
+- Entity importance ranking
 - Most important suspect indetification
 - Most important witness identification
 - Most important location identification
 - Most important evidence identification
+- Shortest path analysis between entities
 
 # Community Detection
 
