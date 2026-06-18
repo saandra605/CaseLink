@@ -140,3 +140,31 @@ Challenges:
 Next Steps:
 - Display shortest paths more clearly in the graph
 - Continue improving investigation analysis
+
+## Day 7
+
+Implemented:
+- Added entity investigation tool
+- Added neighbour relationship display
+- Added short path analysis
+
+Changes/Improvements:
+- Users can investigate a specific entity
+- Investigation results show connected entities and their relationships
+- Shortest paths can now explain how entities are connected instead of only showing node names
+
+Learned:
+- How to find neighbours of a node
+- Why paths contain n - 1 relationships
+- How to combine different graph measurements into one function
+- How to access edge attributes in NetworkX
+- How shortest paths are represented as lists
+
+Challneges:
+- Understanding how to work woth neighbouring nodes in a path
+- Accessing relationshop information stored on edges
+- Designing a reusable investigation function
+
+Next Steps:
+-
+

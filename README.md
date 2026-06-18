@@ -26,6 +26,8 @@ A graph-based investigation analysis tool that models relationships between susp
 - Most important location identification
 - Most important evidence identification
 - Shortest path analysis between entities
+- Entity investigation tool
+- Showing how entities are connected
 
 # Community Detection
 

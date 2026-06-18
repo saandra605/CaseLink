@@ -83,14 +83,44 @@ def find_shortest_path(start, end):
 
     list = nx.shortest_path(G, start, end)
 
-    path = "-> ".join(list)
-
     print(f"\nShortest Path from {start} -> {end} is: ")
-    print(f"{path}")
+
+    for i in range(len(list) - 1):
+        node1 = list[i]
+        node2 = list[i + 1]
+
+        relationship = G[node1][node2]["relationship"]
+
+        print(f"{node1} -- {relationship} --> {node2}")
+
 
 find_shortest_path("John Carter","Marcus White")
 
 partition = community_louvain.best_partition(G)
+
+def investigate(entity):
+
+    entity_type = G.nodes[entity]["entity_type"]
+
+    community = partition[entity]
+    degree = centrality[entity]
+    between = betweenness[entity]
+    neighbors = list(G.neighbors(entity))
+
+
+    print(f"\nEntity: {entity}")
+    print(f"Type: {entity_type}")
+    print(f"\nNeighbours: ")
+
+    for neighbor in neighbors:
+        relationship = G[entity][neighbor]["relationship"]
+        print(f"- {neighbor} ({relationship})")
+
+    print(f"\nCommunity: {community}")
+    print(f"Degree Centrality: {degree}")
+    print(f"Betweeness: {between}")
+
+investigate("Marcus White")
 
 community_colors = {0: "red", 1: "blue", 2: "green", 3: "purple", 4: "orange"}
 
