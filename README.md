@@ -13,8 +13,10 @@ A graph-based investigation analysis tool that models relationships between susp
 
 - Interactive graph visualisation using PyVis
 - Automatic node colouring
-- Community-based colouring
+- Community-based visualisation
 - Interactive node hover information
+- Relationship information popups
+- Importance-based node sizing
 
 # Network Analysis
 

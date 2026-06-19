@@ -13,7 +13,7 @@ for index, row in entities.iterrows():  # loop through every row in the table
 relationships = pd.read_csv("data/relationships.csv")
 
 for index, row in relationships.iterrows():  # loop through every row in the table
-    G.add_edge(row["source"], row["target"], relationship=row["relationship"])
+    G.add_edge(row["source"], row["target"], relationship=row["relationship"], title=row["relationship"])
 
 centrality = nx.degree_centrality(G)
 
@@ -141,9 +141,13 @@ for node in G.nodes():
 
     importance_score = centrality[node]
 
-    G.nodes[node]["title"] = (f"Type: {entity_type}\n"f"Community: {community_id}\n" f"Importance: {importance_score:.3f}")
+    G.nodes[node]["title"] = (f"Entity: {node}\n" f"Type: {entity_type}\n"f"Community: {community_id}\n" f"Importance: {importance_score:.3f}\n" f"Betweenness: {betweenness[node]:.3f}")
+
+    G.nodes[node]["size"] = 15 + (centrality[node] * 100)
 
 net.from_nx(G)
+
+net.show_buttons(filter_=["physics"])
 
 net.write_html("case_network.html")
 

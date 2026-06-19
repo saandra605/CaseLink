@@ -168,3 +168,28 @@ Challneges:
 Next Steps:
 -
 
+## Day 8
+
+Implemented:
+- Added node information popups
+- Added relationship popups on graph connections
+- Added node sizing based on their importance scores
+
+Changes/Improvements:
+- Hovering over a node now shows investigation information
+- Hovering over a connection shows the relationship type
+- Graph is easier to understand visually
+
+Learned:
+- How to add extra information to PyVis nodes
+- How to add information to graph connections
+- How to change node sizes automatically
+
+Challenges:
+- Getting information to display correctly on the graph
+- Trying to get PyVis control buttons to appear
+
+Next Steps:
+- Make the graph more interactive
+- Move investigation tools onto the webpage
+- Adding a search functionality
