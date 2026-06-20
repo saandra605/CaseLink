@@ -37,7 +37,13 @@ A graph-based investigation analysis tool that models relationships between susp
 - Automatic cluster identification
 - Community-based visualisation
 
-## Technologies
+# Web Application
+
+- Flask web application
+- HTML templates
+- Embedded interactive graph
+
+# Technologies
 
 - Python
 - Pandas

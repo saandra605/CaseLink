@@ -193,3 +193,29 @@ Next Steps:
 - Make the graph more interactive
 - Move investigation tools onto the webpage
 - Adding a search functionality
+
+## Day 9
+
+Implemented:
+- Created a Flask web application
+- Added HTML templates
+- Embedded PyVis graph into the website
+
+Changes/Improvements:
+- CaseLink can be accessed through a web browser
+- The graph is displayed directly on the website
+
+Learned:
+- How Flask routes work
+- How HTML templates work
+- How to serve files through Flask
+
+Challenges:
+- Fixing the render_template error
+- Understanding send_file()
+- Getting the graph to display correctly inside the webpage
+
+Next Steps:
+- Improve the website layout
+- Add navigation buttons
+

@@ -147,7 +147,8 @@ for node in G.nodes():
 
 net.from_nx(G)
 
-net.show_buttons(filter_=["physics"])
+net.show_buttons()
+
 
 net.write_html("case_network.html")
 
