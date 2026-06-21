@@ -37,6 +37,11 @@ def get_score(item):
 
 sorted_entities = sorted(centrality.items(), key=get_score, reverse=True)
 
+top_entities = [ ]
+
+for entity, score in sorted_entities[:5]:
+    top_entities.append(entity)
+
 print("\nTop Entities:")
 
 rank = 1
@@ -74,10 +79,17 @@ def find_most_important(entity_type, scores):
     print(f"\nMost Important {entity_type.title()}: {name}")
     print(f"Score: {score:.3f}")
 
-find_most_important("suspect", centrality)
-find_most_important("witness", centrality)
-find_most_important("location", centrality)
-find_most_important("evidence", centrality)
+    return name
+
+most_important_suspect = find_most_important("suspect", centrality)
+
+most_important_witness = find_most_important("witness", centrality)
+
+most_important_location = find_most_important("location", centrality)
+
+most_important_evidence = find_most_important("evidence", centrality)
+
+most_important_entity = most_important
 
 def find_shortest_path(start, end):
 
@@ -121,6 +133,29 @@ def investigate(entity):
     print(f"Betweeness: {between}")
 
 investigate("Marcus White")
+
+def get_entity_info(entity):
+
+    entity_type = G.nodes[entity]["entity_type"]
+
+    community = partition[entity]
+
+    degree = centrality[entity]
+
+    between = betweenness[entity]
+
+    neighbours = list(G.neighbors(entity))
+
+    return {
+        "entity": entity,
+        "type": entity_type,
+        "community": community,
+        "degree": degree,
+        "betweenness": between,
+        "neighbours": neighbours
+    }
+
+print(get_entity_info("Marcus White"))
 
 community_colors = {0: "red", 1: "blue", 2: "green", 3: "purple", 4: "orange"}
 

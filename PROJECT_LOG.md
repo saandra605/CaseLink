@@ -219,3 +219,33 @@ Next Steps:
 - Improve the website layout
 - Add navigation buttons
 
+## Day 10
+
+Implemented:
+- Added Top Entities section to the website
+- Added Case Summary section to the website
+- Added Entity Investigation section to the website
+- Connected graph analysis data from main.py to Flask
+- Created a get_entity_info() function
+
+Changes/Improvements:
+- Analysis results are displayed on the website instead of only in the terminal
+
+Learned:
+- How to import variables and functions between Python files
+- How to pass data from Flask to HTML
+- How Flask template loops work
+- The difference between printing data and returning data
+
+Challenges:
+- Fixing the sorted vs sorted_entities error
+- Understanding how data moves from Python to Flask and then to HTML
+- Learning how to display dictionary values in templates
+
+Next Steps:
+- Add entity search functionality
+- Allow users to investigate different entities
+- Display neighbour relationships on the website
+- Improve the website layout and design
+
+
