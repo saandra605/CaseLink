@@ -248,4 +248,32 @@ Next Steps:
 - Display neighbour relationships on the website
 - Improve the website layout and design
 
+## Day 11
 
+Implemented:
+- Added entity search functionality
+- Connected the user input to graph analysis
+- Added a dashboard-style webpage layout
+- Added information cards for analysis sections
+- Added a sidebar and graph layout
+
+Changes/Improvements:
+- Users can search for entities directly from the website
+- Investigation information updates automatically
+- Website layout is more organised and easier to use
+- Graph is now displayed alongside investigation information
+
+Learned:
+- How HTML forms work
+- How to use request.args in Flask
+- How to receive user input from webpages
+- How to create dashboard layouts using CSS
+- How to organise webpage content into sections
+
+Challenges:
+- Fixing the entity variable error
+- Debugging the search box
+- Understanding how Flask handles form input
+
+Next Steps:
+- Imrpove the overall user interface

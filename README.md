@@ -45,6 +45,9 @@ A graph-based investigation analysis tool that models relationships between susp
 - Top Entities dashboard
 - Case Summary dashboard
 - Entity investigation panel
+- Entity search functionality
+- Dashboard-style layout
+- Information cards
 
 # Technologies
 

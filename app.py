@@ -13,6 +13,12 @@ entity_info = get_entity_info
 
 @app.route("/")
 def home():
+
+    entity = request.args.get("entity", "Marcus White")
+
+    entity_info = get_entity_info(entity)
+
+
     return render_template(
         "index.html",
         top_entities=top_entities,
