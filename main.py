@@ -144,7 +144,12 @@ def get_entity_info(entity):
 
     between = betweenness[entity]
 
-    neighbours = list(G.neighbors(entity))
+    neighbours = [ ]
+
+    for neighbour in G.neighbors(entity):
+        relationship = G[entity][neighbour]["relationship"]
+
+        neighbours.append({"name": neighbour, "relationship": relationship})
 
     return {
         "entity": entity,
@@ -179,6 +184,12 @@ for node in G.nodes():
     G.nodes[node]["title"] = (f"Entity: {node}\n" f"Type: {entity_type}\n"f"Community: {community_id}\n" f"Importance: {importance_score:.3f}\n" f"Betweenness: {betweenness[node]:.3f}")
 
     G.nodes[node]["size"] = 15 + (centrality[node] * 100)
+
+total_entities = len(G.nodes())
+
+total_relationships = len(G.edges())
+
+total_communities = len(set(partition.values()))
 
 net.from_nx(G)
 

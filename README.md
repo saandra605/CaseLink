@@ -42,11 +42,12 @@ A graph-based investigation analysis tool that models relationships between susp
 - Flask web application
 - HTML templates
 - Embedded interactive graph
+- Dashboard-style interface
+- Statistics cards
 - Top Entities dashboard
 - Case Summary dashboard
 - Entity investigation panel
 - Entity search functionality
-- Dashboard-style layout
 - Information cards
 
 # Technologies

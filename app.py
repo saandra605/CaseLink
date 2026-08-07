@@ -5,7 +5,11 @@ from main import (top_entities,
                   most_important_witness,
                   most_important_location,
                   most_important_evidence,
-                  get_entity_info)
+                  get_entity_info,
+                  total_entities,
+                  total_communities,
+                  total_relationships
+                )
 
 app = Flask(__name__)
 
@@ -27,7 +31,10 @@ def home():
         most_important_witness=most_important_witness,
         most_important_location=most_important_location,
         most_important_evidence=most_important_evidence,
-        entity_info=entity_info
+        entity_info=entity_info,
+        total_entities=total_entities,
+        total_relationships=total_relationships,
+        total_communities=total_communities
     )
 
 @app.route("/graph")

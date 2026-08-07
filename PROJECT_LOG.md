@@ -277,3 +277,27 @@ Challenges:
 
 Next Steps:
 - Imrpove the overall user interface
+
+## Day 12
+
+Implemented:
+- Redesigned the CaseLink dashboard
+- Added a professional header
+- Improved the overall website layout
+- Improved the search bar design
+- Improved card styling anf spacing
+
+Changes/Improvements:
+- Dashboard has a cleaner and more professional appearance
+- Search functionality is easier to use
+- Investigation graph is presented more clearly alongside the dashboard
+
+Learned:
+- How CSS can improve the appearance of a web application
+- How Flexbox can be used to build dashboard layouts
+- How to organise information into reusable interface components
+
+Challenges:
+- Debugging CSS layout issues
+- Improving the dashboard without changing the existing functionality
+- Balancing the sidebar and graph layout
