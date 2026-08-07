@@ -8,7 +8,8 @@ from main import (top_entities,
                   get_entity_info,
                   total_entities,
                   total_communities,
-                  total_relationships
+                  total_relationships,
+                  get_entities_by_type
                 )
 
 app = Flask(__name__)
@@ -22,10 +23,18 @@ def home():
 
     entity_info = get_entity_info(entity)
 
+    entity_filter = request.args.get("filter", "all")
+
+    if entity_filter == "all":
+        filtered_entities = top_entities
+
+    else:
+        filtered_entities = get_entities_by_type(entity_filter)
 
     return render_template(
         "index.html",
-        top_entities=top_entities,
+        top_entities=filtered_entities,
+        entity_filter=entity_filter,
         most_important_entity=most_important_entity,
         most_important_suspect=most_important_suspect,
         most_important_witness=most_important_witness,

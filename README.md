@@ -30,6 +30,7 @@ A graph-based investigation analysis tool that models relationships between susp
 - Shortest path analysis between entities
 - Entity investigation tool
 - Showing how entities are connected
+- Importance-ranked entity filtering
 
 # Community Detection
 
@@ -49,6 +50,7 @@ A graph-based investigation analysis tool that models relationships between susp
 - Entity investigation panel
 - Entity search functionality
 - Information cards
+- Entity filtering
 
 # Technologies
 

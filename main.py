@@ -169,6 +169,21 @@ print("\nCommunitities:")
 for node, community_id in partition.items():
     print(f"{node}: Community {community_id}")
 
+def get_entities_by_type(entity_type):
+
+    entities = []
+
+    for node, data in G.nodes(data=True):
+
+        if data["entity_type"] == entity_type:
+            entities.append((node, centrality[node]))
+
+    entities = sorted(entities, key=get_score, reverse=True)
+
+    return [entity for entity, score in entities]
+
+
+
 net = Network(height="750px", width="100%", notebook=False)
 
 for node in G.nodes():

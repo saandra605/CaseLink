@@ -301,3 +301,24 @@ Challenges:
 - Debugging CSS layout issues
 - Improving the dashboard without changing the existing functionality
 - Balancing the sidebar and graph layout
+
+## Day 13
+
+Implemented:
+- Added entity filtering to the dashboard
+- Added filter buttons for different entity types
+- Added a reusable get_entities_by_type() function
+- Ranked the filtered entities by their importance scores
+
+Changes/Improvements:
+- Users can filter entities by type (suspects, witnesses, evidence, locations, vehicles and organisations)
+- Filtered results are now sorted by importance instead of the order they were added
+
+Learned:
+- How to filter data using reusable Python functions
+- How to pass filter values from HTML to Flask using URL parameters
+- How to sort filtered data before displaying it
+
+Challenges:
+- Understanding why sorting required both entity names and centrality scores
+- Fixing tuple and list errors when sorting filtered entities
