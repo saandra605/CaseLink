@@ -345,3 +345,22 @@ Challenges:
 - Getting the filter to work correctly with the graph
 - Making sure the graph updated when a different filter was selected
 - Fixing an error with variables being imported from main.py
+
+## Day 15
+
+Implemented:
+- Added a clearer display for the entity currently being investigated
+- Removed the duplicate entity name from the investigation section
+- Improved the styling of the current entity display
+
+Changes/Improvements:
+- Removed unnecessary repetition from the investigation results
+- Made the dashboard cleaner and easier to read
+
+Learned:
+- How to use CSS classes to style specific sections of a webpage
+- How HTML structure affects how information is displayed
+
+Challenges:
+- Finding where the duplicate entity name was being displayed
+- Changing the investigation section without affecting the rest of the dashboard

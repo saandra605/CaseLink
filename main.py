@@ -8,7 +8,8 @@ G = nx.Graph()
 entities = pd.read_csv("data/entities.csv")
 
 for index, row in entities.iterrows():  # loop through every row in the table
-    G.add_node(row["name"], entity_type=row["entity_type"], color=row["color"])
+    name = row["name"].strip()
+    G.add_node(name, entity_type=row["entity_type"], color=row["color"])
 
 relationships = pd.read_csv("data/relationships.csv")
 

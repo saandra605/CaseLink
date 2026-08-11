@@ -1,13 +1,13 @@
 # CaseLink
 
-A graph-based investigation analysis tool that models relationships between suspects, victims, evidence, location and events.
+A graph-based investigation analysis tool that models relationships between suspects, victims, evidence, locations and events.
 
 ## Current Features
 
 # Data Management
 
 - Load cases from CSV files
-- Seperate entity and relationship datasets
+- Separate entity and relationship datasets
 
 # Network Visualisation
 
@@ -23,7 +23,7 @@ A graph-based investigation analysis tool that models relationships between susp
 - Degree centrality analysis
 - Betweenness centrality analysis
 - Entity importance ranking
-- Most important suspect indetification
+- Most important suspect identification
 - Most important witness identification
 - Most important location identification
 - Most important evidence identification
@@ -54,6 +54,7 @@ A graph-based investigation analysis tool that models relationships between susp
 - Information cards
 - Entity filtering
 - Entity-type graph filtering
+- Current investigation display
 
 # Technologies
 
