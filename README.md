@@ -31,6 +31,8 @@ A graph-based investigation analysis tool that models relationships between susp
 - Entity investigation tool
 - Showing how entities are connected
 - Importance-ranked entity filtering
+- Entity-type filtering
+- Visual highlighting of selected entity types
 
 # Community Detection
 
@@ -51,6 +53,7 @@ A graph-based investigation analysis tool that models relationships between susp
 - Entity search functionality
 - Information cards
 - Entity filtering
+- Entity-type graph filtering
 
 # Technologies
 

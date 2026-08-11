@@ -322,3 +322,26 @@ Learned:
 Challenges:
 - Understanding why sorting required both entity names and centrality scores
 - Fixing tuple and list errors when sorting filtered entities
+
+## Day 14
+
+Implemented:
+- Added entity-type filtering to the investigation network
+- Added graph highlighting based on the selected entity type
+- Added an "All" option to display the full network
+- Kept non-selected entities visible but faded to keep the network context
+
+Changes/Improvements:
+- Users can now focus on specific types of entities within the investigation network
+- The graph is easier to analyse when there are many different entity types
+
+Learned:
+- How to pass a filter from the website to Python
+- How to change the colour of graph nodes
+- How to use if statements to control what appears on the graph
+- How Flask and PyVis can work together
+
+Challenges:
+- Getting the filter to work correctly with the graph
+- Making sure the graph updated when a different filter was selected
+- Fixing an error with variables being imported from main.py

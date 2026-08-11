@@ -9,7 +9,8 @@ from main import (top_entities,
                   total_entities,
                   total_communities,
                   total_relationships,
-                  get_entities_by_type
+                  get_entities_by_type,
+                  create_graph
                 )
 
 app = Flask(__name__)
@@ -48,6 +49,11 @@ def home():
 
 @app.route("/graph")
 def graph():
+
+    entity_filter = request.args.get("filter", "all")
+
+    create_graph(entity_filter)
+
     return send_file("case_network.html")
 
 

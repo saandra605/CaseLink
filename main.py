@@ -162,12 +162,17 @@ def get_entity_info(entity):
 
 print(get_entity_info("Marcus White"))
 
+
 community_colors = {0: "red", 1: "blue", 2: "green", 3: "purple", 4: "orange"}
 
 print("\nCommunitities:")
 
 for node, community_id in partition.items():
     print(f"{node}: Community {community_id}")
+
+total_entities = len(G.nodes())
+total_relationships = len(G.edges())
+total_communities = len(set(partition.values()))
 
 def get_entities_by_type(entity_type):
 
@@ -182,35 +187,56 @@ def get_entities_by_type(entity_type):
 
     return [entity for entity, score in entities]
 
+def create_filtered_graph(entity_type):
+
+    filtered_graph = nx.Graph()
+
+    for node, data in G.nodes(data=True):
+
+        if data["entity_type"] == entity_type:
+
+            filtered_graph.add_node(node, **data)
+    for node1, node2, data in G.edges(data=True):
+
+        if node1 in filtered_graph.nodes() and node2 in filtered_graph.nodes():
+
+            filtered_graph.add_edge(node1, node2, **data)
+    return filtered_graph
+
+def create_graph(entity_filter="all"):
+
+    net = Network(height="750px", width="100%", notebook=False)
+
+    for node in G.nodes():
+
+        community_id = partition[node]
+
+        entity_type = G.nodes[node]["entity_type"]
+
+        original_color = community_colors.get(community_id, "grey")
 
 
-net = Network(height="750px", width="100%", notebook=False)
+        if entity_filter == "all":
+            G.nodes[node]["color"] = original_color
 
-for node in G.nodes():
+        elif G.nodes[node]["entity_type"] == entity_filter:
+            G.nodes[node]["color"] = original_color
 
-    community_id = partition[node]
+        else:
+            G.nodes[node]["color"] = "#d3d3d3"
+        importance_score = centrality[node]
 
-    G.nodes[node]["color"] = community_colors.get(community_id, "grey")
+        G.nodes[node]["title"] = (f"Entity: {node}\n"
+                                  f"Type: {entity_type}\n"
+                                  f"Community: {community_id}\n"
+                                  f"Importance: {importance_score:.3f}\n"
+                                  f"Betweenness: {betweenness[node]:.3f}")
 
-    entity_type = G.nodes[node]["entity_type"]
-
-    importance_score = centrality[node]
-
-    G.nodes[node]["title"] = (f"Entity: {node}\n" f"Type: {entity_type}\n"f"Community: {community_id}\n" f"Importance: {importance_score:.3f}\n" f"Betweenness: {betweenness[node]:.3f}")
-
-    G.nodes[node]["size"] = 15 + (centrality[node] * 100)
-
-total_entities = len(G.nodes())
-
-total_relationships = len(G.edges())
-
-total_communities = len(set(partition.values()))
-
-net.from_nx(G)
-
-net.show_buttons()
+        G.nodes[node]["size"] = 15 + (centrality[node] * 100)
 
 
-net.write_html("case_network.html")
+    net.from_nx(G)
 
-print("\nNetwork created!")
+    net.show_buttons()
+
+    net.write_html("case_network.html")
