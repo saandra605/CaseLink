@@ -364,3 +364,22 @@ Learned:
 Challenges:
 - Finding where the duplicate entity name was being displayed
 - Changing the investigation section without affecting the rest of the dashboard
+
+## Day 16
+
+Implemented:
+- Highlighted the entity currently being investigated in the graph
+- Improved community colours
+- Improved entity labels
+- Added a network legend explaining graph colours
+
+Changes/Improvements:
+- The searched entity is now highlighted in yellow
+- Community colours are less harsh
+- The currently investigated entity has a larger, bold label
+- Added a network legend to explain community colours, selected entities and filtered entities
+
+Learned:
+- How URL parameters can be used to pass the selected entity to the graph
+- How HTML and CSS can be used to create a network legend
+

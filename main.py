@@ -164,7 +164,7 @@ def get_entity_info(entity):
 print(get_entity_info("Marcus White"))
 
 
-community_colors = {0: "red", 1: "blue", 2: "green", 3: "purple", 4: "orange"}
+community_colors = {0:"#4C78A8", 1: "#F58518", 2: "#54A24B", 3: "#B279A2", 4: "#E45756",}
 
 print("\nCommunitities:")
 
@@ -204,7 +204,7 @@ def create_filtered_graph(entity_type):
             filtered_graph.add_edge(node1, node2, **data)
     return filtered_graph
 
-def create_graph(entity_filter="all"):
+def create_graph(entity_filter="all", selected_entity=None):
 
     net = Network(height="750px", width="100%", notebook=False)
 
@@ -216,8 +216,11 @@ def create_graph(entity_filter="all"):
 
         original_color = community_colors.get(community_id, "grey")
 
+        if node == selected_entity:
+            G.nodes[node]["color"] = "#FFD700"
 
-        if entity_filter == "all":
+
+        elif entity_filter == "all":
             G.nodes[node]["color"] = original_color
 
         elif G.nodes[node]["entity_type"] == entity_filter:
@@ -235,6 +238,10 @@ def create_graph(entity_filter="all"):
 
         G.nodes[node]["size"] = 15 + (centrality[node] * 100)
 
+        if node == selected_entity:
+            G.nodes[node]["font"] = {"size": 22, "bold": True}
+        else:
+            G.nodes[node]["font"] = {"size": 14}
 
     net.from_nx(G)
 

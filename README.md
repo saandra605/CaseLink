@@ -55,6 +55,9 @@ A graph-based investigation analysis tool that models relationships between susp
 - Entity filtering
 - Entity-type graph filtering
 - Current investigation display
+- Searched entity graph highlighting
+- Network legend
+
 
 # Technologies
 

@@ -52,7 +52,9 @@ def graph():
 
     entity_filter = request.args.get("filter", "all")
 
-    create_graph(entity_filter)
+    entity = request.args.get("entity")
+
+    create_graph(entity_filter, entity)
 
     return send_file("case_network.html")
 
