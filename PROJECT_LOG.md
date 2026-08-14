@@ -397,3 +397,21 @@ Learned:
 - How to count different types of entities in the
 case data
 - How to display case statistics using HTML and CSS
+
+## Day 18
+
+Implemented:
+- Improved the graph layout
+- Made the investigation graph taller
+- Removed the unnecessary graph settings panel
+- Fixed the graph legend styling
+
+Changes/Improvements:
+- Increased the graph height to make better use of the page
+- Removed the PyVis settings panel from underneath the graph
+- Fixed the missing semicolon in the graph legend CSS
+
+What I learned:
+- How the PyVis graph height affects the dashboard layout
+- How removing net.show_buttons() removes the graph settings panel
+- How CSS controls the size and appearance of the dashboard elements

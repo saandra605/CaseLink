@@ -224,7 +224,7 @@ def create_filtered_graph(entity_type):
 
 def create_graph(entity_filter="all", selected_entity=None):
 
-    net = Network(height="750px", width="100%", notebook=False)
+    net = Network(height="1655px", width="100%", notebook=False)
 
     for node in G.nodes():
 
@@ -262,7 +262,5 @@ def create_graph(entity_filter="all", selected_entity=None):
             G.nodes[node]["font"] = {"size": 14}
 
     net.from_nx(G)
-
-    net.show_buttons()
 
     net.write_html("case_network.html")

@@ -1,6 +1,6 @@
 # CaseLink
 
-A graph-based investigation analysis tool that models relationships between suspects, victims, evidence, locations and events.
+A graph-based investigation analysis tool that models relationships between suspects, witnesses, evidence, locations, vehicles and organisations.
 
 ## Current Features
 
@@ -17,6 +17,9 @@ A graph-based investigation analysis tool that models relationships between susp
 - Interactive node hover information
 - Relationship information popups
 - Importance-based node sizing
+- Visual highlighting of selected entities
+- Network legend
+- Improved graph layout
 
 # Network Analysis
 
@@ -32,13 +35,14 @@ A graph-based investigation analysis tool that models relationships between susp
 - Showing how entities are connected
 - Importance-ranked entity filtering
 - Entity-type filtering
-- Visual highlighting of selected entity types
+- Graph-filtering
 
 # Community Detection
 
 - Louvain community detection
 - Automatic cluster identification
 - Community-based visualisation
+- Community-based node colouring
 
 # Web Application
 
@@ -58,6 +62,16 @@ A graph-based investigation analysis tool that models relationships between susp
 - Searched entity graph highlighting
 - Network legend
 
+# Case Statistics
+- Total number of entities
+- Total number of relationships
+- Total number of communities
+- Number of suspects
+- Number of witnesses
+- Number of evidence items
+- Number of locations
+- Number of vehicles
+- Number of organisations
 
 # Technologies
 
@@ -67,4 +81,6 @@ A graph-based investigation analysis tool that models relationships between susp
 - PyVis
 - Git/GitHub
 - Python-Louvain
+- Flask
+- HTML/CSS
 
