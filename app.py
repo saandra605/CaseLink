@@ -10,7 +10,13 @@ from main import (top_entities,
                   total_communities,
                   total_relationships,
                   get_entities_by_type,
-                  create_graph
+                  create_graph,
+                  total_suspects,
+                  total_witnesses,
+                  total_evidence,
+                  total_locations,
+                  total_vehicles,
+                  total_organisations
                 )
 
 app = Flask(__name__)
@@ -44,7 +50,14 @@ def home():
         entity_info=entity_info,
         total_entities=total_entities,
         total_relationships=total_relationships,
-        total_communities=total_communities
+        total_communities=total_communities,
+        total_suspects=total_suspects,
+        total_witnesses=total_witnesses,
+        total_evidence=total_evidence,
+        total_locations=total_locations,
+        total_vehicles=total_vehicles,
+        total_organisations=total_organisations
+
     )
 
 @app.route("/graph")

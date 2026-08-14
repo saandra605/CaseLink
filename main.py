@@ -188,6 +188,24 @@ def get_entities_by_type(entity_type):
 
     return [entity for entity, score in entities]
 
+def get_entity_count(entity_type):
+
+    count = 0
+
+    for node, data in G.nodes(data=True):
+
+        if data["entity_type"] == entity_type:
+            count += 1
+
+    return count
+
+total_suspects = get_entity_count("suspect")
+total_witnesses = get_entity_count("witness")
+total_evidence = get_entity_count("evidence")
+total_locations = get_entity_count("location")
+total_vehicles = get_entity_count("vehicle")
+total_organisations = get_entity_count("organisation")
+
 def create_filtered_graph(entity_type):
 
     filtered_graph = nx.Graph()

@@ -383,3 +383,17 @@ Learned:
 - How URL parameters can be used to pass the selected entity to the graph
 - How HTML and CSS can be used to create a network legend
 
+## Day 17
+
+Implemented:
+- Added case statistics to the dashboard
+- Added counts for suspects, witnesses, evidence, locations, vehicles and organisations
+
+Changes/Improvements:
+- Case information is now displayed clearly on the dashboard
+- Statistics are separated into individual sections for easier reading
+
+Learned:
+- How to count different types of entities in the
+case data
+- How to display case statistics using HTML and CSS
