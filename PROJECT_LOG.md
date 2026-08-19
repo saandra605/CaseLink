@@ -415,3 +415,32 @@ What I learned:
 - How the PyVis graph height affects the dashboard layout
 - How removing net.show_buttons() removes the graph settings panel
 - How CSS controls the size and appearance of the dashboard elements
+
+## Day 19
+
+Implemented:
+- Made the selected entity name bold without making it bigger
+- Made Top Entities clickable
+- Added hover effects to clickable entities
+- Improved the dashboard layout so it fits the screen better
+- Made the statistics cards smaller
+- Made the Investigate Entity section smaller
+- Made the filter buttons smaller
+- Made the Top Entities card smaller
+- Made the Case Summary card smaller
+- Made the Entity Investigation card smaller
+- Improved the size and spacing of the graph legend
+- Increased the size of the Investigation Network heading
+
+Learned:
+- How CSS flexbox affects the size and positioning of dashboard sections
+- How to make parts of a webpage clickable using JavaScript
+- How CSS can be used to make individual cards smaller without changing the other cards
+- How spacing, padding and margins affect the layout of a webpage
+
+Challenges:
+- Getting the selected entity to appear bold without making the text bigger
+- Making the Top Entities clickable without making them look like links or buttons
+- Fixing the dashboard width so it fits properly on the screen
+- Getting the graph legend to have the right spacing and layout
+

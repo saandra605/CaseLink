@@ -257,9 +257,11 @@ def create_graph(entity_filter="all", selected_entity=None):
         G.nodes[node]["size"] = 15 + (centrality[node] * 100)
 
         if node == selected_entity:
-            G.nodes[node]["font"] = {"size": 22, "bold": True}
+            G.nodes[node]["label"] = f"<b>{node}</b>"
+            G.nodes[node]["font"] = {"size": 14,"multi": "html"}
         else:
-            G.nodes[node]["font"] = {"size": 14}
+            G.nodes[node]["label"] = node
+            G.nodes[node]["font"] = {"size": 14, "face": "Arial"}
 
     net.from_nx(G)
 

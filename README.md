@@ -18,8 +18,10 @@ A graph-based investigation analysis tool that models relationships between susp
 - Relationship information popups
 - Importance-based node sizing
 - Visual highlighting of selected entities
+- Bold highlighting of the selected entity
 - Network legend
 - Improved graph layout
+- Improved dashboard layout
 
 # Network Analysis
 
@@ -61,6 +63,9 @@ A graph-based investigation analysis tool that models relationships between susp
 - Current investigation display
 - Searched entity graph highlighting
 - Network legend
+- Clickable Top Entities
+- Entity hover effects
+- Responsive dashboard layout
 
 # Case Statistics
 - Total number of entities
