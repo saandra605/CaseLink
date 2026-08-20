@@ -22,6 +22,7 @@ A graph-based investigation analysis tool that models relationships between susp
 - Network legend
 - Improved graph layout
 - Improved dashboard layout
+- Fixed graph zoom and movement
 
 # Network Analysis
 

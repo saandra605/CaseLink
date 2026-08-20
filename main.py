@@ -224,7 +224,16 @@ def create_filtered_graph(entity_type):
 
 def create_graph(entity_filter="all", selected_entity=None):
 
-    net = Network(height="1655px", width="100%", notebook=False)
+    net = Network(height="670px", width="100%", notebook=False)
+
+    net.set_options("""
+    var options = {
+        "interaction": {
+            "zoomView": false,
+            "dragView": false
+        }
+    }
+    """)
 
     for node in G.nodes():
 
@@ -262,6 +271,7 @@ def create_graph(entity_filter="all", selected_entity=None):
         else:
             G.nodes[node]["label"] = node
             G.nodes[node]["font"] = {"size": 14, "face": "Arial"}
+
 
     net.from_nx(G)
 

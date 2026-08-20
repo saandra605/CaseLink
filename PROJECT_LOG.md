@@ -444,3 +444,21 @@ Challenges:
 - Fixing the dashboard width so it fits properly on the screen
 - Getting the graph legend to have the right spacing and layout
 
+## Day 20
+
+Implemented:
+- Made the graph smaller so it fits the screen better
+- Disabled zooming on the graph
+- Disabled dragging the graph around
+
+
+Learned:
+- How PyVis uses interaction options to control how users interact with the graph
+- How zoomView can disable zooming
+- How dragView can disable dragging
+
+Challenges:
+- The graph had too much empty space above and below it
+- The graph could be zoomed and moved around which made it harder to view consistently
+- Finding the right graph size so it fits the dashboard without needing to scroll too much
+
